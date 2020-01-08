@@ -1,0 +1,4 @@
+# Project exclude paths
+/hdfs/target/
+/mapreduce/target/
+/zookeeper/target/
