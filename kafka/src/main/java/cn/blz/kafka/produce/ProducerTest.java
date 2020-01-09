@@ -1,4 +1,4 @@
-package cn.blz;
+package cn.blz.produce;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;

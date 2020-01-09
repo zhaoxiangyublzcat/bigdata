@@ -13,6 +13,8 @@
         <module>mapreduce</module>
         <module>zookeeper</module>
         <module>kafka</module>
+        <module>spark</module>
+        <module>scala</module>
     </modules>
 
     <properties>
@@ -23,7 +25,8 @@
         <hadoop.version>3.0.0</hadoop.version>
         <zookeeper.version>3.4.10</zookeeper.version>
         <kafka.version>0.11.0.0</kafka.version>
-        <!--        <spark.version>2.2.0</spark.version>-->
+        <scala.version>2.11.0</scala.version>
+        <spark.version>2.2.0</spark.version>
     </properties>
 
     <dependencyManagement>
@@ -62,6 +65,16 @@
                 <groupId>org.apache.kafka</groupId>
                 <artifactId>kafka-clients</artifactId>
                 <version>${kafka.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.scala-lang</groupId>
+                <artifactId>scala-library</artifactId>
+                <version>${scala.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-core_2.11</artifactId>
+                <version>${spark.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
