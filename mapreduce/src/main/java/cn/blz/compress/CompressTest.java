@@ -7,14 +7,15 @@ import org.apache.hadoop.io.compress.CompressionCodec;
 import org.apache.hadoop.io.compress.CompressionCodecFactory;
 import org.apache.hadoop.io.compress.CompressionInputStream;
 import org.apache.hadoop.io.compress.CompressionOutputStream;
+import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.util.ReflectionUtils;
 
 import java.io.*;
 
 /**
+ * @author Blzcat
  * @description 文件流压缩解压缩测试
  * @className CompressTest
- * @author Blzcat
  * @date 2019.12.30 15:58
  */
 public class CompressTest {
@@ -24,10 +25,10 @@ public class CompressTest {
     }
 
     /**
-     * @param	fileName 文件名称
+     * @param fileName 文件名称
      * @description 数据流解压
-     * @author  Blzcat
-     * @date    2019.12.30 16:38
+     * @author Blzcat
+     * @date 2019.12.30 16:38
      */
     private static void decompress(String fileName) throws IOException {
         CompressionCodecFactory compressionCodecFactory = new CompressionCodecFactory(new Configuration());
@@ -46,11 +47,11 @@ public class CompressTest {
     }
 
     /**
-     * @param	fileName 文件名称
-     * @param	method 压缩方法
+     * @param fileName 文件名称
+     * @param method   压缩方法
      * @description 数据流压缩
-     * @author  Blzcat
-     * @date    2019.12.30 16:33
+     * @author Blzcat
+     * @date 2019.12.30 16:33
      */
     private static void compress(String fileName, String method) throws IOException, ClassNotFoundException {
         FileInputStream fileInputStream = new FileInputStream(new File(fileName));

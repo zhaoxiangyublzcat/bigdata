@@ -80,4 +80,9 @@ public class WordCount {
     public static void main(String[] args) throws InterruptedException, IOException, ClassNotFoundException {
         run();
     }
+
+
+    public static class MTest extends Mapper<String, String, String, String> {
+
+    }
 }
